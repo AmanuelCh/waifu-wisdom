@@ -25,7 +25,6 @@ async function postAnimeQuote() {
     //     character: { id: 1837, name: 'Rider' },
     //   },
     // };
-    console.log(data);
 
     const quote = data.data.content;
     const character = data.data.character.name;
@@ -39,6 +38,6 @@ async function postAnimeQuote() {
   }
 }
 
-setInterval(postAnimeQuote, 15000);
+setInterval(postAnimeQuote, 12 * 60 * 60 * 1000);
 
 bot.start();
