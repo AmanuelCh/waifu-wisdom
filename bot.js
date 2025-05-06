@@ -16,6 +16,7 @@ async function postAnimeQuote() {
     if (!response.ok) throw new Error(`Animechan error: ${response.status}`);
 
     const data = await response.json();
+
     // const data = {
     //   status: 'success',
     //   data: {
@@ -38,6 +39,6 @@ async function postAnimeQuote() {
   }
 }
 
-setInterval(postAnimeQuote, 12 * 60 * 60 * 1000);
+postAnimeQuote();
 
 bot.start();
